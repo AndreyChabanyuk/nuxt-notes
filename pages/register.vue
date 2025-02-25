@@ -58,8 +58,6 @@ import Swal from 'sweetalert2'
 
 const password = ref('')
 const email = ref('')
-const err = ref('')
-/* const data = ref(null) */
 
 const submit = async () => {
 	console.log('submit')

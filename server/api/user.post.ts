@@ -35,7 +35,7 @@ export default defineEventHandler(async(event) => {
 					salt: salt,
 				},
 			})
-            const token = jwt.sign({ id: user.id }, '')
+/*             const token = jwt.sign({ id: user.id }, '') */
 			return { data: 'success' }
     } catch(error){
         console.log(error.code)
