@@ -73,7 +73,7 @@ const submit = async () => {
 			   text: 'Account created successfully',
 			   icon: 'success',
 			   confirmButtonText: 'Close'
-			})w
+			})
 			if(isConfirmed){
 				navigateTo('/')
 			}
