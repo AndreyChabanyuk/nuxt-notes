@@ -64,7 +64,7 @@ const err = ref("");
 const submit = async () => {
   console.log("submit");
   try {
-    const response = await axios.get("/api/user", {
+    const response = await axios.get("/api/login", {
       email: email.value,
       password: password.value,
     });
