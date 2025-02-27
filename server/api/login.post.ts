@@ -27,7 +27,7 @@ export default defineEventHandler(async event => {
 			})
 		}
 		const user = await prisma.user.findUnique({
-			data: {
+			where: {
 				email: body.email,
 			},
 		})
@@ -41,7 +41,7 @@ export default defineEventHandler(async event => {
 		
         }
 
-		const token = jwt.sign({ id: user.id }, process.env.JWT_TOKEN)
+		const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET)
 		setCookie(event, 'NoteNestJWT', token)
 
 		return { data: 'success' }

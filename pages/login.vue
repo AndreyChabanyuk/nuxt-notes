@@ -64,13 +64,13 @@ const err = ref("");
 const submit = async () => {
   console.log("submit");
   try {
-    const response = await axios.get("/api/login", {
+    const response = await axios.post("/api/login", {
       email: email.value,
       password: password.value,
     });
     const { isConfirmed } = await Swal.fire({
       title: "Success",
-      text: "Account created successfully",
+      text: "Logged in successfully",
       icon: "success",
       confirmButtonText: "Close",
     });
