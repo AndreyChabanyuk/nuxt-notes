@@ -1,3 +1,5 @@
+
+
 <template>
 	<div class="bg-zinc-900 h-[100vh] flex">
 		<div class="bg-black w-[307px] p-8">
@@ -70,6 +72,7 @@
 </template>
 
 <script lang="ts" setup>
+import axios from 'axios'
 const items = ref([
 	{
 		title: 'Just finished reading...',
@@ -87,6 +90,12 @@ const items = ref([
 		description: '1984...',
 	},
 ])
+
+onMounted(async () => {
+    const response = await axios.post('/api/notes')
+    console.log(response)
+})
+
 </script>
 
 <style scoped>
